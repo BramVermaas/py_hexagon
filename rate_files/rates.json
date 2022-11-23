@@ -1,0 +1,5 @@
+{
+   "threshold":50.0,
+   "below_threshold_rate":1.1,
+   "above_threshold_rate":1.5
+}
