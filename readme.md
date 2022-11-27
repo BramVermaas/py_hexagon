@@ -1,38 +1,26 @@
 Py-Hexagon
 ==========
 
-A (non-web) python version of the [Smaller Web Hexagon](https://github.com/totheralistair/SmallerWebHexagon/) 
+A (non-web specific) python version of the [Smaller Web Hexagon](https://github.com/totheralistair/SmallerWebHexagon/) 
 by Alistair Cockburn.
 
-![Alt text](docs/hexagon.png?raw=true "Rating Hexagon")
+- For a full description, you can refer to:  [About Py-Hexagon](docs/about_py-hexagon.md).
+- An overview of hexagonal architecture can be read here: [Hexagonal Architecture](docs/hexagonal_architecture.md).
+
+![Alt text](docs/hexagon.png?raw=true "Hexagonal-Architecture")
 
 
-Like the original by Alistair, this is an example of a simple hexagon 
-with one **driving** (also called inbound or left-side) port 
-and one **driven** (outgoing or right-side) port.
+### Running  code
 
-
-- The application simply calculates the formula: `result = input * rate`.
-- The driving port is connected to either a user input prompt or to a fake input (test double).
-- The driven port looks up the rate from either a file or a fake (test double).
-
-*To keep the example short, input sanitization and error handling have been left out.*
-*Also, the directory structure and module names have been chosen for illustrative purposes.*
-*This is not production ready code,*
-*it merely serves to convey the concept of hexagonal architecture.*
-
-
-## Running the application
-
-If you have python 3 installed, you can run:
+Either using python 3:
 
     python -m py_hexagon
 
-Otherwise, you can use docker: 
+Or with docker: 
 
     docker compose run --rm app
 
-## Running tests
+### Running tests
 
 Either run:
 
@@ -41,10 +29,4 @@ Either run:
 or alternatively: 
 
     docker compose run --rm app unittest discover tests
-
-
-
-## Further reading
-- [Alistair Cockburn, hexagonal-architecture](https://alistair.cockburn.us/hexagonal-architecture/)
-- [A color coded guide to ports and adapters](https://8thlight.com/insights/a-color-coded-guide-to-ports-and-adapters)
 

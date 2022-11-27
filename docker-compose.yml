@@ -4,8 +4,6 @@ services:
     image: py_hexagon
     command: "py_hexagon"
     volumes:
-      - ./py_hexagon:/app/py_hexagon
-      - ./rate_files:/app/rate_files
-      - ./tests:/app/tests
+      - ./:/app/
     stdin_open: true
     tty: true

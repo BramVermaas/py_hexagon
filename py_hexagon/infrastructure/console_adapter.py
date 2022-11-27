@@ -1,10 +1,10 @@
-from py_hexagon.ports.rating_usecase import RatingUseCase
+from py_hexagon.domain.request_rating import RequestRating
 
 
-class PromptRatingUseCase:
-    """Adapter for RatingUseCase port."""
+class ConsoleAdapter:
+    """Adapter for RequestRating (driver) port."""
 
-    def __init__(self, rating_app: RatingUseCase):
+    def __init__(self, rating_app: RequestRating):
         self._rating_app = rating_app
 
     def start(self):

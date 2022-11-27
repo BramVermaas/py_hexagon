@@ -1,8 +1,8 @@
 from abc import ABCMeta, abstractmethod
 
 
-class RateProvider(metaclass=ABCMeta):
-    """Driven (outgoing) port of RatingApplication."""
+class ObtainRate(metaclass=ABCMeta):
+    """Driven (right) port of Rater."""
 
     @abstractmethod
     def get_rate_for(self, value: float) -> float:

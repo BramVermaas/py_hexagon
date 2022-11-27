@@ -1,11 +1,11 @@
 import json
 
-from py_hexagon.ports.rate_provider import RateProvider
+from py_hexagon.domain.obtain_rate import ObtainRate
 from pathlib import Path
 
 
-class FileRateProvider(RateProvider):
-    """Adapter for RateProvider port."""
+class FileRateProvider(ObtainRate):
+    """Adapter for ObtainRate (driven) port."""
 
     def get_rate_for(self, value: float) -> float:
         rate_specs = self._rate_spec_from_file()

@@ -8,8 +8,8 @@ class Rating:
     result: float
 
 
-class RatingUseCase(metaclass=ABCMeta):
-    """Driving (inbound) port of RatingApplication."""
+class RequestRating(metaclass=ABCMeta):
+    """Driver (left) port of Rater."""
 
     @abstractmethod
     def get_rating(self, value: float) -> Rating:
